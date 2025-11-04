@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Zeonify Global | Futuristic 3D Agency</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #fff;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  /* 3D Dynamic Background Canvas */
+  #bg3d {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+  }
+  /* Header with Logo & Navigation */
+  header {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 2rem 3rem; background: rgba(255,255,255,0.8);
+    border-bottom: 1px solid #ddd; backdrop-filter: blur(8px);
+    position: relative; z-index: 10;
+  }
+  .logo-container {
+    display: flex; align-items: center; gap: 10px;
+  }
+  .logo-svg {
+    width: 50px; height: 50px;
+  }
+  .logo-text {
+    font-size: 2rem; font-weight: 700; letter-spacing: 2px; color: #333;
+  }
+  nav a {
+    margin-left: 25px; text-decoration: none; color: #555; font-weight: 600;
+    transition: color 0.3s;
+  }
+  nav a:hover { color: #007bff; }
+
+  main {
+    max-width: 1024px; margin: 6rem auto 3rem; padding: 0 2rem;
+  }
+  h1 {
+    font-size: 3rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #222;
+  }
+  /* Sections Styles */
+  section {
+    margin-top: 3.5rem;
+  }
+  h2 {
+    font-size: 2rem; margin-bottom: 1.3rem; color: #555; position: relative;
+  }
+  h2::after {
+    content: "";
+    display: block; width: 70px; height: 3px; background: #007bff; margin-top: 0.4rem;
+  }
+  /* Photos & Proofs Layout */
+  .projects {
+    display: grid; grid-template-columns: repeat(auto-fit,minmax(300px,1fr)); gap: 1.8rem;
+    margin-top: 2rem;
+  }
+  .project {
+    background: #f4f4f4; border-radius: 12px; padding: 1em; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .project:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+  .project img {
+    width: 100%; height: auto; border-radius: 8px; margin-bottom: 0.8rem;
+  }
+  .project h3 { font-size: 1.2rem; margin-bottom: 0.6rem; color: #007bff; }
+  .project p { font-size: 1rem; color: #555; }
+  .proof-result {
+    margin-top: 0.6rem; font-weight: 600; color: #333;
+  }
+  /* Footer styles */
+  footer {
+    text-align: center; padding: 2rem; background: #f7f7f7; margin-top: 4rem; font-size: 0.95rem; color: #666;
+  }
+</style>
+</head>
+<body>
+
+<!-- 3D Dynamic Background -->
+<canvas id="bg3d"></canvas>
+
+<header>
+  <div class="logo-container">
+    <!-- Logo SVG -->
+    <svg class="logo-svg" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" stroke="#007bff" stroke-width="3"/>
+      <path d="M20 44 L44 20" stroke="#007bff" stroke-width="5" stroke-linecap="round"/>
+      <rect x="20" y="20" width="24" height="24" stroke="#007bff" stroke-width="5" fill="none"/>
+      <text x="32" y="42" font-size="18" fill="#007bff" font-family="Poppins" font-weight="700" text-anchor="middle">Z</text>
+    </svg>
+    <div class="logo-text">Zeonify Global</div>
+  </div>
+  <nav>
+    <a href="#about">About Us</a>
+    <a href="#projects">Projects</a>
+    <a href="#testimonials">Testimonials</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h1>Leading the Future of Digital Marketing & Projects</h1>
+
+  <section id="about">
+    <h2>About Zeonify Global</h2>
+    <p>Zeonify Global is a premium agency with proven track record of successful projects across UK & India. We deliver innovative digital solutions, branding, and strategic growth for leading brands and startups. Our team’s expertise combined with futuristic tech makes us a trustworthy partner for your global success journey.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Our Recent Projects & Results</h2>
+    <div class="projects">
+      <!-- Sample Project with fake images -->
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1624718591492-94768f4a7d4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80" alt="LuminaTech Project" />
+        <h3>LuminaTech Website Revamp</h3>
+        <p>Complete website redesign for UK SaaS startup. Increased leads by 40%, improved UX & loading speed.</p>
+        <div class="proof-result">Result: +40% leads, +25% longer session duration</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80" alt="Nexa Digital Campaign" />
+        <h3>Nexa Digital Social Campaign</h3>
+        <p>Boosted social media followers by 150% with targeted content and engagement strategies, leading to increased sales.</p>
+        <div class="proof-result">Result: 150% followers & 75% engagement spike</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1611050654094-5094c86ba179?ixlib=rb-4.0.3&auto=format&fit=crop&w=768&q=80" alt="GreenLeaf AI Automation" />
+        <h3>GreenLeaf AI Chatbot</h3>
+        <p>Implemented AI chatbots for customer support, increasing conversions and reducing response time by 50%.</p>
+        <div class="proof-result">Result: +50% conversion rate, 2x faster responses</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="projects">
+      <div class="project">
+        <blockquote>“Zeonify delivered exceptional results on our new branding campaign. Their futuristic approach built rapid trust in our niche market.”</blockquote>
+        <div style="margin-top:10px;">— Olivia, CEO, UK Tech Solutions</div>
+      </div>
+      <div class="project">
+        <blockquote>“They helped us launch our India expansion with a strong digital strategy, leading to a 60% growth in engagement.”</blockquote>
+        <div style="margin-top:10px;">— Ramesh, Founder, IndiaConnect</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <p>Email: contact@zeonifyglobal.co.uk | Phone (UK): +44 207 XXXXX | Phone (India): +91 99XXXXX</p>
+  </section>
+</main>
+
+<footer>&copy; 2025 Zeonify Global. All rights reserved.</footer>
+
+<!-- Three.js for futuristic 3D animated background -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+<script>
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth/window.innerHeight, 0.1, 250);
+camera.position.z=100;
+
+const renderer = new THREE.WebGLRenderer({canvas: document.getElementById('bg3d'), antialias:true, alpha:true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setClearColor(0xffffff, 0);
+
+/* Create floating abstract 3D shape for futuristic vibe */
+const geometry = new THREE.TorusKnotGeometry(20, 5, 100, 16);
+const material = new THREE.MeshStandardMaterial({ color: 0x0ff, metalness: 0.6, roughness: 0.2, emissive:0x003344});
+const shape = new THREE.Mesh(geometry, material);
+scene.add(shape);
+
+const ambientLight = new THREE.AmbientLight(0xffffff, 0.3);
+scene.add(ambientLight);
+const pointLight = new THREE.PointLight(0x00f, 1);
+pointLight.position.set(30,30,50);
+scene.add(pointLight);
+
+function animate() {
+  requestAnimationFrame(animate);
+  shape.rotation.x += 0.003;
+  shape.rotation.y += 0.004;
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize', () => {
+  camera.aspect=window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+
+</body>
+</html>
